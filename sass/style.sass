@@ -1,0 +1,59 @@
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+.container
+  width: 100%
+  padding: 20px 0
+  margin: 0 auto
+.table
+  border-collapse: collapse
+  &-block
+    width: 100%
+    margin-bottom: 50px
+    &:first-of-type
+      overflow-x: auto
+  &__head
+    background-color: #222
+    color: #fff
+  th
+    padding: 10px 0
+    font-size: 20px
+  td
+    padding: 10px
+    border-right: 1px solid #222
+    // border-left: 1px solid #222
+    font-size: 20px
+    border-bottom: 1px solid #222
+  tr
+    transition: .4s
+    &:hover
+      background-color: green !important
+      cursor: pointer
+      color: #fff
+    &:nth-child(even)
+      background-color: #888
+
+@media screen and ( max-width: 900px )
+  .table
+    &-block
+      &:last-of-type
+        table
+          width: 100%
+          display: block
+          thead, tbody, thead th
+            display: block
+          thead
+            float: left
+            height: 100%
+          tbody
+            overflow-x: auto
+            tr
+              display: table-cell
+          td
+            display: block
+            text-align: center
+            text-overflow: ellipsis
+            overflow: hidden
+            max-width: 250px
+            white-space: nowrap
